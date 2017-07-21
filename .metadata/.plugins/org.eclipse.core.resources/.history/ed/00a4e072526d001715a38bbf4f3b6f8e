@@ -1,0 +1,20 @@
+package Tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import Intermediate.Garage;
+import Intermediate.Person;
+
+public class GarageTest {
+
+	Garage g = new Garage();
+
+	@Test
+	public void testPrintList() {
+
+		fail("Method Failed the Test");
+
+	}
+}

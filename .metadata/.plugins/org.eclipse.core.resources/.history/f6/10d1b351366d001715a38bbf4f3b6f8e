@@ -1,0 +1,9 @@
+package Intermediate;
+
+public class PeopleRunner {
+
+	public void run() {
+		
+		
+	}
+}

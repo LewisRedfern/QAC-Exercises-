@@ -1,0 +1,85 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Hello World");
+
+		String HW = "Hello World!";
+
+		System.out.println(HW);
+
+		helloWorld("Hello World3");
+
+		System.out.println(returnHello());
+
+		sumOf(4, 6, false);
+		checkForZero(3,2, false);
+
+	}// end of main
+
+	public static void helloWorld(String helloParameter) {
+
+		System.out.println(helloParameter);
+	}// end of helloWorld
+
+	public static String returnHello() {
+
+		return "Hello World!";
+	}// end of returnHello
+
+	public static int sumOf(int i1, int i2, boolean iIsSmall) {
+		
+		int i3 = 0;
+
+		if (iIsSmall == true) {
+
+			i3 = i1 + i2;
+			System.out.println(i3);
+
+		} else if (iIsSmall == false) {
+
+			i3 = i1 * i2;
+			System.out.println(i3);
+
+		}
+		return i3;
+	}// end of sumOf
+	
+public static int checkForZero(int i1, int i2, boolean iIsSmall) {
+		
+	if (i1 == 0) {
+		
+		System.out.println(i2);
+		return i2;
+	}	
+	
+	else if (i2 == 0) {
+		
+		System.out.println(i1);
+		return i1;
+	}
+	
+	else {
+	int i3 = 0;
+
+		if (iIsSmall == true) {
+
+			i3 = i1 + i2;
+			System.out.println(i3);
+
+		} else if (iIsSmall == false) {
+
+			i3 = i1 * i2;
+			System.out.println(i3);
+
+		} return i3;
+	}
+	
+		
+	}// end of sumOf
+	
+	
+
+}// end of Main

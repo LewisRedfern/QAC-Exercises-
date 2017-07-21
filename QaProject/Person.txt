@@ -1,0 +1,5 @@
+Name: Lewis | Occupation: Consultant | Age: 21.
+Name: Ash | Occupation: Pokemon Trainer | Age: 10.
+Name: Jon Snow | Occupation: King of the North | Age: 22.
+Name: Martine | Occupation: Mum | Age: 39.
+Name: Kris | Occupation: Rugby Player | Age: 23.

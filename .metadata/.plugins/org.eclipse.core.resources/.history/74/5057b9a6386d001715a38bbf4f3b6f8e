@@ -1,0 +1,38 @@
+import Factorals.FactoralRunner;
+import Intermediate.Garage;
+import Intermediate.Inter;
+import Intermediate.ObjectOrient;
+import beginner.Beginner;
+import Intermediate.PaintCalculator;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Beginner b = new Beginner();
+		b.run();
+		
+		System.out.println("");
+		
+		Inter I = new Inter();
+		I.run();
+		
+		System.out.println("");
+
+		ObjectOrient OO = new ObjectOrient();
+		OO.run();
+		
+		System.out.println("");
+
+		Garage g = new Garage();
+		g.run();
+		
+		PaintCalculator p = new PaintCalculator();
+		p.run();
+		
+		FactoralRunner f = new FactoralRunner();
+		
+
+	}// end of main
+
+}// end of Main

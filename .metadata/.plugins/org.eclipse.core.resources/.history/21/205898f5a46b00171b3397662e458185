@@ -1,0 +1,17 @@
+package Intermediate;
+
+public class ObjectOrient {
+
+	public static void main (String[] args) {
+		
+		Person p1 = new Person("Lewis", 21, "Consultant");
+		Person p2 = new Person("Martine", 39, "Teacher");
+		Person p3 = new Person("Em", 20, "Nurse");
+		Person p4 = new Person("George", 21, "Salesman");
+		
+		System.out.println(p1.strMaker());
+		System.out.println(p2.strMaker());
+		System.out.println(p3.strMaker());
+		System.out.println(p4.strMaker());
+	}		
+}

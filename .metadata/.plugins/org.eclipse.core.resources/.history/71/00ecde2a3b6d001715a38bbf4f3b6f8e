@@ -1,0 +1,56 @@
+package Intermediate;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class PeopleRunner {
+
+	ArrayList<String> addToFile = new ArrayList<String>();
+	ArrayList<String> getFromFile = new ArrayList<String>();
+
+	People p1 = new People("Lewis", "Consultant", 21);
+	People p2 = new People("Ash", "Pokemon Trainer", 10);
+	People p3 = new People("Jon Snow", "King of the North", 22);
+	People p4 = new People("Martine", "Mum", 39);
+	People p5 = new People("Kris", "Rugby Player", 23);
+
+	public void run() throws Exception {
+
+		addHuman();
+		addHumanToFile();
+	}
+
+	public void addHuman() {
+
+		addToFile.add(p1.strMaker());
+		addToFile.add(p2.strMaker());
+		addToFile.add(p3.strMaker());
+		addToFile.add(p4.strMaker());
+		addToFile.add(p5.strMaker());
+
+		System.out.println("people added...");
+	}
+
+	public void addHumanToFile() throws Exception {
+
+		try{
+	          BufferedWriter writer = new BufferedWriter(new FileWriter("Person.txt"));
+	          for (String str : addToFile) {
+	        	  writer.write(str);  
+	          }
+	          
+		writer.close();
+		
+		System.out.println("peoplw written to file.....");
+		}
+		
+		catch (IOException ex) 
+	      {
+			System.out.println(ex.getMessage());
+	      } 
+	}
+}
+
+	

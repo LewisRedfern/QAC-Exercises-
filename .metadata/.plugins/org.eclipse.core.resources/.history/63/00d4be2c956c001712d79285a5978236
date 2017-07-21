@@ -1,0 +1,43 @@
+package Factorals;
+
+public class FactoralRunner {
+
+	
+//	3628800
+//	479001600
+//	6
+//	18​
+	public FactoralRunner() {
+		
+		start();
+		
+		
+	}
+
+	public void start() {
+		
+		System.out.println("Hello World!");
+		
+		
+		System.out.println(Factorial(120));
+	}
+	
+	public int Factorial(int n){
+		
+		int result = 0; 
+		int i = 2;
+		
+		do {
+			result = n / i;
+			i++;
+			
+			if (result == 1) {
+								
+				System.out.println(i + "!");
+				return result;
+			}
+			
+		}while (result > 1); 
+		return (-1);
+	}
+}

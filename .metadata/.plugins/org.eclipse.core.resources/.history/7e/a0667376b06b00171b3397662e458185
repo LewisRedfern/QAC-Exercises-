@@ -1,0 +1,12 @@
+package Intermediate;
+
+public class Boat extends Vehicle{
+	
+	private boolean hasEngine;
+	
+	public Boat(int size, int seats, String make, double topSpeed, boolean hasEngine) {
+		super(size, seats, make, topSpeed);
+
+		this.hasEngine = hasEngine;
+	}
+}

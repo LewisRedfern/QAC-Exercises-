@@ -1,0 +1,20 @@
+package Tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import Intermediate.PaintCalculator;
+
+public class TestPaintCalculator {
+
+	PaintCalculator pc = new PaintCalculator();
+	@Test
+	public void testRun() {
+
+		pc.run();
+		
+		assertEquals("array should have 3 results.", 3, pc.retrieveArray());
+	}
+
+}

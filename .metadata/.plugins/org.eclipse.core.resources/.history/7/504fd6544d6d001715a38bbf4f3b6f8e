@@ -1,0 +1,18 @@
+package Tests;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+import Intermediate.Person;
+import Intermediate.PersonRunner;
+
+public class TestPersonRunner {
+
+	@Test
+	public void testRun() {
+		
+		
+		assertEquals("blah blah", "Name: Lewis | Age: 21 | Job Title: Consultant", new Person("Lewis", 21, "Consultant").strMaker());
+	}
+
+}

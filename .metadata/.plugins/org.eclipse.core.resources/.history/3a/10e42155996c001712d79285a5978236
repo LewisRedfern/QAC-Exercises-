@@ -1,0 +1,84 @@
+package Factorals;
+
+import java.util.Scanner;
+
+public class FactoralRunner {
+
+	
+//	3628800 = 10!
+//	479001600 =12!
+//	6 = 3!
+//	18 = NONE​
+	public FactoralRunner() {
+		
+		start();
+		
+		
+	}
+
+	public void start() {
+		
+		System.out.println("Hello World!");
+		
+		
+		System.out.println(Factorial(18) == -1 ? "NONE" : Factorial(18) + "!");
+		
+		rngGame();
+	}
+	
+	public int Factorial(int n){
+		
+		int result = n; 
+		int i = 2;
+		
+		do {
+			result = result / i;
+			
+			
+			if (result == 1) {
+								
+				//System.out.println(i + "!");
+				return i;
+			}
+			i++;
+		}while (result > 1); 
+		return (-1);
+	}
+
+
+	public void rngGame() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int random = (int)Math.random() * 100;
+		int tries = 6;
+		int guess = 0;
+		
+		while (tries > 0) {
+		
+			System.out.println("Guess my number: \n");
+			
+			guess = sc.nextInt();
+			
+			if (guess == random) {
+				
+				System.out.println("Well Done");
+				System.out.println("you had " + tries + " left.");
+				break;
+			}
+			else if (guess > random) {
+				
+				System.out.println(("lower"));
+			}
+			else if (guess < random) {
+				
+				System.out.println(("Higher"));
+
+			}
+			tries--;
+			
+		}
+		System.out.println("FAIL!!!!!");
+		
+	}
+}

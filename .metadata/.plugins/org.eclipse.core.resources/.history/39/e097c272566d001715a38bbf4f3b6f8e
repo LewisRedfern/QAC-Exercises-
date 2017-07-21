@@ -1,0 +1,21 @@
+package Tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import Intermediate.PaintCalculator;
+
+public class TestPaintCalculator {
+
+	PaintCalculator pc = new PaintCalculator();
+	@Test
+	public void testRun() {
+
+		pc.run();
+		
+		System.out.println(pc.retrieveArray().size());
+		assertEquals("array should have 1 results.", 1, pc.retrieveArray().size());
+	}
+
+}

@@ -1,0 +1,40 @@
+package Intermediate;
+
+import java.util.ArrayList;
+
+public class PaintCalculator {
+	
+	ArrayList<Paint> paintList = new ArrayList<Paint>();
+	
+	Paint p1 = new Paint ("CheapoMax", 19.99, 20, 10);
+	Paint p2 = new Paint ("AverageJoes", 17.99, 15, 11);
+	Paint p3 = new Paint ("DuluxourousPaints", 25.00, 10, 20);
+	
+	public void run() {
+		
+		paintList.add(p1);
+		paintList.add(p2);
+		paintList.add(p3);
+		
+		wasteCheck(500);
+	}//end of run
+	
+	public void wasteCheck (int roomSize) {
+		
+		for (Paint p : paintList) {
+			
+			double totalCoverage = p.getpaintCoverage() * p.getpaintLitre();
+			double waste = roomSize - totalCoverage;
+			double totalWaste = waste / p.getpaintLitre();
+			
+			if (totalWaste < 0) {
+				
+				
+			}
+			
+			System.out.println(p.getpaintName().toString() + "Waste: " + totalWaste);
+		}//end of enhanced for
+		///return p;
+	}//end of wasteCheck
+	
+}
