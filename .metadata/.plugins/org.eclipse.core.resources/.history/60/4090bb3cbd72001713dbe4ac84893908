@@ -1,0 +1,6 @@
+package offlineWork;
+
+public class main {
+
+	Task1 t1 = new Task1();
+}

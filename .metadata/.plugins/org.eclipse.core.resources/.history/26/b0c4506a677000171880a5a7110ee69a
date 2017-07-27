@@ -1,0 +1,12 @@
+package Library;
+
+import java.util.HashMap;
+
+public class PersonHandler {
+
+	
+boolean isMember;
+boolean newEmployee;
+
+	
+}

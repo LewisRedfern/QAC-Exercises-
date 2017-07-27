@@ -1,0 +1,17 @@
+package Advanced;
+
+import java.util.ArrayList;
+
+public class Anagram {
+
+	private ArrayList<String> anaList = new ArrayList<String>();
+	public void play () {
+		
+		
+	}
+	
+	public void readFromFile () {
+		
+		
+	} 
+}

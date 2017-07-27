@@ -1,0 +1,17 @@
+package Library;
+
+public class Member implements Person{
+
+	private int personID;
+	private String name;
+	private String personType;
+	private String postcode;
+
+	public Member(int personID, String name, String personType, String postcode) {
+		// TODO Auto-generated method stub
+		this.personID = personID;
+		this.name = name;
+		this.personType = personType;
+		this.postcode = postcode;
+	}
+}

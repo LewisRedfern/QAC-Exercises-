@@ -1,0 +1,49 @@
+package Library;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+
+public class PersonHandler {
+
+private HashMap<Integer, Person> peopleList = new HashMap<Integer, Person>();	
+
+
+int i = 0;
+
+	public void AddPerson(Person p) {
+		
+		peopleList.put(i++, p);
+	}
+	
+	public Person getPerson (int id) {
+		
+		return peopleList.get(id);
+	}
+	
+	public void delPerson(int id) {
+
+		peopleList.remove(id);
+	}
+	
+	public void delPerson (String type) {
+		Iterator<Entry<Integer, Person>> peopleSearch = peopleList.entrySet().iterator();
+		
+		while (peopleSearch.hasNext()) {
+			
+			Entry<Integer, Person> entry = peopleSearch.next();
+			
+			if (type.equals("Staff") && entry instanceof Staff) {
+				peopleList.remove(entry);
+			} else if (type.equals("Member") && entry instanceof Member) {
+				peopleList.remove(entry);
+			}
+
+		}
+	}
+	
+	public void updatePerson (int id, Person p) {
+		
+		peopleList.put(id, p);
+	}
+}

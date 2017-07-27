@@ -1,0 +1,22 @@
+package Tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import Library.Book;
+import Library.Library;
+
+public class libraryTest {
+
+	@Test
+	public void testAddItem() {
+		
+		Library test  = new Library();
+		
+		
+		assertNotNull("The object is Null", test.AddPerson(null));
+
+	}
+
+}

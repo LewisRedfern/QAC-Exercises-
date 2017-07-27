@@ -1,0 +1,23 @@
+package Library;
+
+import java.util.Scanner;
+
+public class Library {
+
+	boolean isMember;
+	boolean newEmployee;
+	Scanner sc = new Scanner(System.in);
+	PersonHandler ph = new PersonHandler();
+	ItemLog il = new ItemLog();
+
+	public void Run() {
+
+		
+	}
+	
+	public Person AddPerson (Person person) {
+		
+		ph.addPerson(person);
+		return person;
+	}
+}

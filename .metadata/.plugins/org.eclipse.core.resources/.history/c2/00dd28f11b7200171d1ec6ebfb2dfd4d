@@ -1,0 +1,16 @@
+package Library;
+
+public class ReadAndWrite {
+
+	private ItemLog il = new ItemLog();
+	
+	public void writeItems () {
+		
+		il.getAllItems();
+	}
+	
+	public void readItems () {
+		
+		
+	}
+}

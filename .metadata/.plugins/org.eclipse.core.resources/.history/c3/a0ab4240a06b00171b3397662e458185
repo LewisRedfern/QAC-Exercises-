@@ -1,9 +1,0 @@
-package Intermediate;
-
-public class Person {
-
-	punlic Person() {
-		
-	}
-
-}

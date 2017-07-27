@@ -1,0 +1,8 @@
+package Library;
+
+public interface Person {
+
+	public void getPerson(int personID, String name, String personType);
+
+	void getPerson(int personID, String name, String personType, String postcode);
+}

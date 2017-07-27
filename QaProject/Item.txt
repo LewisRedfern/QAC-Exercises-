@@ -1,0 +1,2 @@
+Book,The Outsiders,5,1001,true,S. E. Hinton
+Newspaper,The Sun,1,2001,true,Dragon Slayer

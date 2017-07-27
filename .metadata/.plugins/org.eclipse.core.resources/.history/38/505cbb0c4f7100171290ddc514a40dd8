@@ -1,0 +1,47 @@
+package Tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import Library.Book;
+import Library.Library;
+import Library.PersonHandler;
+import Library.Staff;
+
+public class libraryTest {
+
+	PersonHandler ph = new PersonHandler();
+	
+	@Before
+	public void setValues() {
+		
+		ph.AddPerson(new Staff ("test", "Staff", "TEST"));
+	}
+	
+	@Test
+	public void testAddItem() {
+		
+		//System.out.println(ph.getPerson(0));
+		assertEquals("test Staff TEST", ph.getPerson(0));
+	}
+	
+	@Test
+	public void testDelPersonByID () {
+		
+		ph.delPerson(0);
+		assertEquals(null, ph.getPerson(0));
+
+	}
+	
+	@Test
+	public void testDelPersonByType () {
+		
+		ph.delPerson("Staff");
+		assertEquals(null, ph.getPerson(0));
+
+	}
+
+	
+}

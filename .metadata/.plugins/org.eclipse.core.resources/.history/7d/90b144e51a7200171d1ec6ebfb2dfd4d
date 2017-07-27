@@ -1,0 +1,14 @@
+package Library;
+
+public class ReadAndWrite {
+
+	public void writeItems () {
+		
+		
+	}
+	
+	public void readItems () {
+		
+		
+	}
+}

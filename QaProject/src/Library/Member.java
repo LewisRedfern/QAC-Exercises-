@@ -1,6 +1,6 @@
 package Library;
 
-public class Member implements Person{
+public class Member implements Person {
 
 	private String name;
 	private String personType;
@@ -46,5 +46,10 @@ public class Member implements Person{
 		// TODO Auto-generated method stub
 		return this.postcode;
 	}
-	
+
+	@Override
+	public String toString() {
+		return name + " " + personType + " " + postcode;
+	}
+
 }

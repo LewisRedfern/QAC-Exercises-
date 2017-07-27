@@ -1,0 +1,29 @@
+package Library;
+
+import java.util.HashMap;
+
+public class PersonHandler {
+
+private HashMap<Integer, Person> peopleList = new HashMap<Integer, Person>();	
+
+int i = 0;
+
+	public void AddPerson(Person p) {
+		
+		peopleList.put(i++, p);
+	}
+	
+	public Person getPerson (int id) {
+		return peopleList.get(id);
+	}
+	
+	public void delPerson(int id) {
+
+		peopleList.remove(id);
+	}
+	
+	public void updatePerson (int id, Person p) {
+		
+		peopleList.put(id, p);
+	}
+}

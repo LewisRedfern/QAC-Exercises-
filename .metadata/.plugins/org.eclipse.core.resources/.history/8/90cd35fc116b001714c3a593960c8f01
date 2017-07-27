@@ -1,8 +1,0 @@
-package Intermediate;
-
-public class Inter {
-
-	public static void main (String[] args) {
-		
-	}
-}

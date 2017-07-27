@@ -1,0 +1,29 @@
+package Library;
+
+import java.util.Scanner;
+
+public class Library {
+
+	boolean isMember;
+	boolean newEmployee;
+	Scanner sc = new Scanner(System.in);
+	PersonHandler ph = new PersonHandler();
+	ItemLog il = new ItemLog();
+	String s = "Staff";
+	String m = "Member";
+
+	public void Run() {
+
+		AddPerson();		
+	}
+	
+	public void AddPerson (){
+		
+		ph.AddPerson(new Staff("Lewis Redfern", s, "Receptionist"));
+		ph.AddPerson(new Staff("Dylan Evans", s, "Janitor"));
+		ph.AddPerson(new Member("Jon Snow", m, "my666uu"));
+		ph.AddPerson(new Member("Test Ter", m, "np122pp"));
+	}
+	
+	
+}

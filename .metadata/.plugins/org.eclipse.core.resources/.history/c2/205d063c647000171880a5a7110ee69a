@@ -1,0 +1,9 @@
+package Library;
+
+HashMap personList<Integer, Person> = new HashMap<Integer, Person>();
+boolean isMember;
+boolean newEmployee;
+
+public class PersonHandler {
+
+}

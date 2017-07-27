@@ -6,7 +6,7 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		Library lib = new Library();
-		lib.Administrator();
+		lib.Run();
 	}
 
 }

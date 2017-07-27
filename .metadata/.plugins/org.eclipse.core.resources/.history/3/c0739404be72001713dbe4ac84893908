@@ -1,0 +1,26 @@
+package offlineWork;
+
+public class Task1 {
+
+	String s1 = "the";
+	String s2 = "AAbb";
+	String s3 = "Hi-There";
+	
+	public void run() {
+		
+		DoubleChar(s1);
+		DoubleChar(s2);
+		DoubleChar(s3);
+	}
+	public String DoubleChar (String s) {
+		
+		for (int i = 0; i < s.length(); i++) {
+			
+			s.charAt(i);
+			String fin = s + s;
+			System.out.println(fin);
+		}
+		
+		return null;
+	}
+}

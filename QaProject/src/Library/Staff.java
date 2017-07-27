@@ -1,13 +1,13 @@
 package Library;
 
-public class Staff implements Person{
+public class Staff implements Person {
 
 	private String name;
 	private String personType;
 	private String jobTitle;
-	
+
 	public Staff(String name, String personType, String jobTitle) {
-		
+
 		this.name = name;
 		this.personType = personType;
 		this.jobTitle = jobTitle;
@@ -36,7 +36,7 @@ public class Staff implements Person{
 		// TODO Auto-generated method stub
 		return this.personType;
 	}
-	
+
 	public void setJobTitle(String jobTitle) {
 		// TODO Auto-generated method stub
 		this.jobTitle = jobTitle;
@@ -45,6 +45,11 @@ public class Staff implements Person{
 	public String getJobTitle() {
 		// TODO Auto-generated method stub
 		return this.jobTitle;
+	}
+
+	@Override
+	public String toString() {
+		return name + " " + personType + " " + jobTitle;
 	}
 
 }

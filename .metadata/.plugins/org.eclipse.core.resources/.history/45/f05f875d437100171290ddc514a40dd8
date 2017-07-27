@@ -1,0 +1,25 @@
+package Tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import Library.Book;
+import Library.Library;
+import Library.PersonHandler;
+import Library.Staff;
+
+public class libraryTest {
+
+	@Test
+	public void testAddItem() {
+		
+		Library test  = new Library();
+		PersonHandler ph = new PersonHandler();
+		test.AddPerson(new Staff ("test", "test", "TEST"));
+		
+		assertEquals("test test TEST", ph.getPerson(1).toString());
+
+	}
+
+}

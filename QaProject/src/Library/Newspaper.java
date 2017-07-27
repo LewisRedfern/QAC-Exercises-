@@ -16,4 +16,17 @@ public class Newspaper extends Item{
 	public String getHeadline () {
 		return this.headline;
 	}
+	
+	@Override
+	public String toString() {
+		
+		return super.getType() + " " + super.getTitle() + " " + super.getMaxRentTime() + " " + super.getArea() + " " + super.getItemAvailable() + " " + this.getHeadline();
+	}
+	
+	@Override
+	public String serialise() {
+
+		return super.getType() + "," + super.getTitle() + "," + super.getMaxRentTime() + "," + super.getArea() + ","
+				+ super.getItemAvailable() + "," + this.getHeadline();
+	}
 }

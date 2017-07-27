@@ -1,0 +1,16 @@
+package Library;
+
+public interface Person {
+
+	public void setPersonID (int personID);
+	public int getPersonID ();
+	public void setName (String name);
+	public String getName();
+	public void setPersonType (String personType);
+	public String getPersonType ();
+	public void setPostcode (String postcode);
+	public String getPostcode ();
+	public void setJobTitle (String jobTitle);
+	public String getJobTitle ();
+
+}

@@ -1,0 +1,26 @@
+package Advanced;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+
+import com.gargoylesoftware.htmlunit.javascript.host.file.File;
+
+public class Anagram {
+
+	private ArrayList<String> anagramList = new ArrayList<String>();
+	private HashMap <String, String> solvedList = new HashMap<String, String>();
+	
+	public void play () {
+		
+		
+	}
+	
+	public void readFromFile () {
+		
+		Scanner sc;
+		sc = new Scanner(new File("anagram.txt"));
+		
+		
+	} 
+}

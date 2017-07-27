@@ -1,0 +1,16 @@
+package Library;
+
+import java.util.HashMap;
+
+public class PersonHandler {
+
+private HashMap<Integer, Person> peopleList = new HashMap<Integer, Person>();	
+boolean isMember;
+boolean newEmployee;
+int i = 0;
+
+	public void addPerson(Person p) {
+		
+		peopleList.put(i++, p);
+	}
+}

@@ -1,0 +1,16 @@
+package offlineWork;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+//		Task1 t1 = new Task1();
+//		t1.run();
+//		Task2 t2 = new Task2();
+//		t2.run();
+		Task3 t3 = new Task3();
+		t3.run();
+	}
+
+}

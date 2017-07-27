@@ -1,0 +1,61 @@
+package Advanced;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Anagram {
+
+	private ArrayList<String> anagramList = new ArrayList<String>();
+	private HashMap<String, String> solvedList = new HashMap<String, String>();
+
+	public void play() {
+
+		readFromFile();
+	}
+
+	public void readFromFile() {
+
+		Scanner sc;
+		
+		try {
+			sc = new Scanner(new File("anagram.txt"));
+			
+			while (sc.hasNext()) {
+				
+				anagramList.add(sc.nextLine());
+			}sc.close();
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+//		for (String str: anagramList) {
+//			
+//			System.out.println(str);
+//		}
+
+	}//end of readfromfile
+	
+	public String SortStr (String str) {
+		
+		char[] sepStr;
+		
+		for (int i = 0; i < str.length(); i++) {
+			
+			char c = str.charAt(i);
+			
+			sepStr = char[c];
+		}
+		
+		
+		
+		
+		
+		return null;
+	}
+}

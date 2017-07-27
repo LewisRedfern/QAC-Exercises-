@@ -1,0 +1,20 @@
+package Advanced;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class Anagram {
+
+	private ArrayList<String> anaList = new ArrayList<String>();
+	private HashMap <String, String> solvedList = new HashMap<String, String>();
+	
+	public void play () {
+		
+		
+	}
+	
+	public void readFromFile () {
+		
+		
+	} 
+}

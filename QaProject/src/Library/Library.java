@@ -1,223 +1,148 @@
 package Library;
 
-import java.util.Scanner;
-
 public class Library {
 
 	boolean isMember;
 	boolean newEmployee;
-	Scanner sc = new Scanner(System.in);
-	PersonHandler ph = new PersonHandler();
-	ItemLog il = new ItemLog();
 
-	public void Administrator() {
+	private PersonHandler ph = new PersonHandler();
 
-		System.out.println("Welcome.\n Would you like to do?\n");
-		System.out.println("\nPlease enter:\n 1 - to Access Items\t2 - Access Reception: \n");
+	private ItemLog il = new ItemLog();
+	
 
-		int option = Integer.parseInt(sc.nextLine());
+	private String s = "Staff";
+	private String m = "Member";
 
-		switch (option) {
+	private String b = "Book";
+	private String n = "Newspaper";
+	private String map = "Map";
 
-		case 1:
-			// refer to new method to access what you want make new method with
-			// another switch.
-			itemOption();
-			break;
-		case 2:
-			Reception();
-			break;
-		}
-	}
+	public void Run() {
 
-	public void itemOption() {
-
-		System.out.println("What would you like to do to the items?");
-		System.out.println("Please enter: \n 1 - Add Item\t 2 - Delete Item\t 3 - Update Item: \n");
-
-		int option = Integer.parseInt(sc.nextLine());
-
-		switch (option) {
-
-		case 1:
-			// add item method
-			addNewItem();
-			break;
-		case 2:
-			// delete item method
-			break;
-		case 3:
-			// update item method
-			break;
-		}
-	}
-
-	public boolean addNewItem() {
-
-		System.out.println("What type of item are you adding?: \n");
-		System.out.println("Please enter: \n 1 - Book\t 2 - Map\t 3 - Newspaper: \n");
-
-		int option = Integer.parseInt(sc.nextLine());
-
-		switch (option) {
-
-		case 1:
-			// add book
-			System.out.println("Please enter the title of the book: \n");
-
-			String title = sc.nextLine();
-
-			System.out.println("\nPlease enter the max rent time of the item: \n");
-
-			int maxRentTime = Integer.parseInt(sc.nextLine());
-
-			System.out.println("\nPlease enter the area it will be kept in the Library: \n");
-
-			int area = Integer.parseInt(sc.nextLine());
-
-			System.out.println("Please enter the Authors name: \n");
-
-			String author = sc.nextLine();
-
-			il.addItem(new Book("Book", title, maxRentTime, area, true, author));
-			//break;
-			return true;
+		AddPerson("lewis", s, "Receptionist");
+		AddPerson("kim", m, "np182dp");
+		DelPerson(m);
+		GetPerson(0);
 		
-		case 2:
-			// add map
-			System.out.println("Please enter the title of the map: \n");
-
-			String mTitle = sc.nextLine();
-
-			System.out.println("\nPlease enter the max rent time of the item: \n");
-
-			int mMaxRentTime = Integer.parseInt(sc.nextLine());
-
-			System.out.println("\nPlease enter the area it will be kept in the Library: \n");
-
-			int mArea = Integer.parseInt(sc.nextLine());
-
-			System.out.println("Please enter location the map is showing: \n");
-
-			String location = sc.nextLine();
-
-			il.addItem(new Map("Map", mTitle, mMaxRentTime, mArea, true, location));
-			//break;
-			return true;
-
+		AddItem(b, "The Outsiders", 5, 1001, true, "S. E. Hinton");
+		AddItem(n, "The Sun", 1, 2001, true, "Dragon Slayer");
+		AddItem(map, "Map of the world on Mercator's projection Tissue Paper", 10, 3001, true, "Planet Earth");
+		DelItem(map);
+		GetItem(0);
+		checkOutItem(0);
+		GetItem(0);
+		checkInItem(0);
+		GetItem(0);
+		write();
+		read();
 		
-		case 3:
-			// add newspaper
-			System.out.println("Please enter the title of the newspaper: \n");
+	}// end of run
 
-			String nTitle = sc.nextLine();
-
-			System.out.println("\nPlease enter the max rent time of the item: \n");
-
-			int nMaxRentTime = Integer.parseInt(sc.nextLine());
-
-			System.out.println("\nPlease enter the area it will be kept in the Library: \n");
-
-			int nArea = Integer.parseInt(sc.nextLine());
-
-			System.out.println("Please enter the headline: \n");
-
-			String headline = sc.nextLine();
-
-			il.addItem(new Newspaper("Newspaper", nTitle, nMaxRentTime, nArea, true, headline));
-			//break;
-			return true;
-		}
-		return true;
+	public void read () {
+		
+		il.readItems();
 	}
-
-	public void Reception() {
-
-		System.out.println("Welcome to Reception. ");
-		System.out.println("Are you a member?: ");
-
-		// if answer is yes then we do not call addnewperson.
-		String input = sc.nextLine();
-		switch (input) {
-
-		case "yes":
-		case "Yes":
-		case "y":
-		case "Y":
-			isMember = true;
-			// call different method
-			break;
-		case "No":
-		case "no":
-		case "N":
-		case "n":
-			isMember = false;
-			AddNewPerson();
-			break;
-		}
+	
+	public void write () {
+		il.writeItems();
 	}
-
-	public void AddNewPerson() {
-
-		System.out.println("Are you a new member of staff?: ");
-		String input = sc.nextLine();
-		switch (input) {
-
-		case "yes":
-		case "Yes":
-		case "y":
-		case "Y":
-			newEmployee = true;
-			// make new method to input people into person handler class
-			employeeCheck();
-			break;
-		case "No":
-		case "no":
-		case "N":
-		case "n":
-			newEmployee = false;
-			employeeCheck();
-			break;
-
-		}
+	
+	public void checkOutItem (int id) {
+		
+		il.checkOutItem(id);
 	}
+	
+	public void checkInItem (int id) {
+		
+		il.checkInItem(id);
+	}
+	
+	public void AddItem(String type, String title, int maxRentTime, int area, boolean itemAvailable, String extra) {
 
-	public void employeeCheck() {
+		if (type.equals(b)) {
 
-		if (newEmployee == true) {
-			System.out.println("Okay, welcome to the team.");
-			System.out.println("Firstly enter your name: \n");
+			il.addItem(new Book(type, title, maxRentTime, area, itemAvailable, extra));
+		} else if (type.equals(n)) {
 
-			String name = sc.nextLine();
+			il.addItem(new Newspaper(type, title, maxRentTime, area, itemAvailable, extra));
+		} else if (type.equals(map)) {
 
-			System.out.println("Next, please enter your new job title: \n");
+			il.addItem(new Map(type, title, maxRentTime, area, itemAvailable, extra));
+		}
+	}// end of add item
 
-			String jobTitle = sc.nextLine();
+	public void GetItem(int id) {
 
-			System.out.println("Thanks " + name + ".\n");
+		il.getItem(id);
+	}// end of getItem
 
-			ph.addPerson(new Staff(name, "Staff", jobTitle));
+	public void DelItem(int id) {
 
-			System.out.println("You have been added to our system.\n");
+		il.delItem(id);
+	}// end of delItem
+
+	public void DelItem(String type) {
+
+		il.delItem(type);
+	}// end of delItem
+
+	public void UpdateItem(int id, String type, String title, int maxRentTime, int area, boolean itemAvailable,
+			String extra) {
+
+		if (type.equals(b)) {
+
+			il.updateItem(id, new Book(type, title, maxRentTime, area, itemAvailable, extra));
 		}
 
-		else if (newEmployee == false) {
-			System.out.println("I need some details from you before we begin.");
-			System.out.println("Firstly, please enter your name: \n");
+		else if (type.equals(n)) {
 
-			String name = sc.nextLine();
-
-			System.out.println("Please enter your home postcode: \n");
-
-			String postcode = sc.nextLine();
-
-			System.out.println("Thanks " + name + ".\n");
-
-			ph.addPerson(new Member(name, "Member", postcode));
-
-			System.out.println("You have been added to our system.\n");
+			il.updateItem(id, new Newspaper(type, title, maxRentTime, area, itemAvailable, extra));
 		}
 
-		System.out.println(ph.getHash().get(0).getName());
-	}// end of employee check
+		else if (type.equals(map)) {
+
+			il.updateItem(id, new Map(type, title, maxRentTime, area, itemAvailable, extra));
+		}
+	}// end of updateitem
+
+	public void AddPerson(String name, String type, String extra) {
+
+		if (type.equals(s)) {
+
+			ph.AddPerson(new Staff(name, type, extra));
+		}
+
+		else if (type.equals(m)) {
+
+			ph.AddPerson(new Member(name, type, extra));
+		}
+	}// end of addPerson
+
+	public void GetPerson(int id) {
+
+		ph.getPerson(id);
+	}// end of getPerson
+
+	public void DelPerson(int id) {
+
+		ph.delPerson(id);
+	}// end of delperson
+
+	public void DelPerson(String type) {
+
+		ph.delPerson(type);
+	}// end of del person
+
+	public void UpdatePerson(int id, String name, String type, String extra) {
+
+		if (type.equals(s)) {
+
+			ph.updatePerson(id, new Staff(name, type, extra));
+		} // end of update person
+
+		else if (type.equals(m)) {
+
+			ph.updatePerson(id, new Member(name, type, extra));
+		}
+	}// end of update person
 }

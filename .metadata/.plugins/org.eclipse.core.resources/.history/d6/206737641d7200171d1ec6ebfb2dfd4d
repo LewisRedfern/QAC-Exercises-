@@ -1,0 +1,17 @@
+package Library;
+
+public class ReadAndWrite {
+
+	private Library l = new Library();
+	
+	public void writeItems () {
+		
+		//il.getAllItems();
+		l.write();
+	}
+	
+	public void readItems () {
+		
+		
+	}
+}
